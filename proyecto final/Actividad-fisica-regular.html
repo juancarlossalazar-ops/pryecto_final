@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Física Regular</title>
+    <link rel="stylesheet" href="Actividad-fisica-regular.css">
+    <link rel="shortcut icon" href="ICONOS SERV ESE-04.png" type="image/x-icon">
+
+</head>
+<body onload="iniNevada(100,70)">
+
+<header class="hero fade-in">
+    <img src="principales-beneficios-del-entrenamiento-personal.jpg" class="hero-img" alt="Entrenamiento">
+    <div class="hero-text">
+        <h1>Actividad Física Regular</h1> 
+        
+        
+        <a href="#que-es"  class="btn">Descubrir más</a> 
+<br> <br><br>
+        <p>Muévete. Respira. Vive mejor.</p>
+    </div>
+</header>
+
+<nav class="nav slide-down">
+    <a href="promocion de la salud.html" class="button">Inicio</a>
+   
+    <ul>
+        <li><a href="#que-es">¿Qué es?</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#tipos">Tipos</a></li>
+        <li><a href="#tips">Tips</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+
+<section id="que-es" class="section fade-in">
+    <h2>¿Qué es la actividad física regular?</h2>
+    <img src="diferencias-entre-actividad-fisica-y-ejercicio_7_1200x690.jpeg" class="section-img" alt="">
+    <p>Consiste en mover tu cuerpo de manera constante para mejorar tu salud física y mental. No necesitas ser atleta: solo constancia.</p>
+</section>
+
+<section id="beneficios" class="section alt fade-in">
+    <h2>Beneficios</h2>
+    <ul class="lista-beneficios">
+        <li>Mejora tu energía</li>
+        <li>Fortalece tu corazón</li>
+        <li>Aumenta tu fuerza</li>
+        <li>Reduce estrés y ansiedad</li>
+        <li>Mejora el sueño</li>
+    </ul>
+</section>
+
+<section id="tipos" class="section fade-in cards">
+    <h2>Tipos de actividad</h2>
+
+    <article class="card zoom">
+        <img src="descarga.jpeg" alt="">
+        <h3>Entrenamiento de fuerza</h3>
+        <p>Construye músculo, mejora postura y previene lesiones.</p>
+    </article>
+
+    <article class="card zoom">
+        <img src="cardio.jpeg" alt="">
+        <h3>Cardio</h3>
+        <p>Mejora resistencia, circulación y quema calorías.</p>
+    </article>
+
+    <article class="card zoom">
+        <img src="flexibilidad.jpeg" alt="">
+        <h3>Flexibilidad</h3>
+        <p>Libera tensión y mejora movilidad.</p>
+    </article>
+
+</section>
+
+<section id="tips" class="section alt fade-in">
+    <h2>Tips para empezar</h2>
+    <img src="lista.avif" class="section-img" alt="">
+    <ul class="lista-beneficios">
+        <li>Inicia con 15 minutos diarios</li>
+        <li>Elige actividades que disfrutes</li>
+        <li>Combina fuerza y cardio</li>
+        <li>Descansa cuando tu cuerpo lo pida</li>
+        <li>Hidrátate bien</li>
+    </ul>
+</section>
+
+<section id="contacto" class="section fade-in">
+    <h2>Contacto</h2>
+    <p>¿Quieres una guía personalizada? Escríbeme:</p>
+
+    <br><br><br>
+    <a href="" class="btn bounce">Enviar correo</a>
+</section>
+
+<footer class="footer">
+    <p>© Juan Carlos 2025 Actividad Física Regular</p>
+</footer>
+
+<script>
+class oCopo{
+  constructor(tam, id){
+     this.x = 0;
+     this.y = 0;
+     this.size = tam;
+     this.nombre = id
+     this.obj = document.createElement("div");
+     this.obj.setAttribute('id',id);
+     this.obj.innerText="*";
+     this.obj.style.position = "absolute";
+     this.obj.style.fontSize = tam+"px";
+     this.obj.style.color = "white";
+     document.body.appendChild(this.obj)
+}
+dibujar(x,y){
+     this.x = x;
+     this.y = y;
+     this.obj.style.top = this.y+"px";
+     this.obj.style.left = this.x+"px";
+     }
+}
+function iniCopos(num, anc, alto){
+   var copos = new Array(num);
+   var tam, x, y;
+   for (let i = 0; i<num; i++)
+     {
+     tam = Math.round(Math.random()*10)+ 8;
+     copos[i] = new oCopo(tam, "c"+i);
+     x = parseInt(Math.random()*anc);
+     y = parseInt(Math.random()*alto);
+     copos[i].dibujar(x,y);
+     }
+return copos;
+}
+function iniNevada(num, vel)
+{
+var ancho = document.body.offsetWidth-10;
+var alto = window.innerHeight-10;
+var losCopos = iniCopos(num, ancho, alto)
+nevar(losCopos, ancho,alto, vel);
+} 
+function nevar(copos, coposAncho, coposAlto, vel)
+{
+var x, y;
+for (let i = 0; i < copos.length; i++)
+    {
+    y = copos[i].y;
+     x = copos[i].x;
+    if (Math.random() > 0.5)
+        y += parseInt(Math.random()+1);
+    y += parseInt(Math.random()+2);
+    if (y >= (coposAlto - copos[i].size))
+        {
+        y = Math.round(Math.random()*10);
+        x  =parseInt(Math.random()*coposAncho-1); 
+        }
+copos[i].dibujar(x,y); 
+    }
+setTimeout(nevar, vel, copos,  coposAncho, coposAlto, vel);
+}
+</script>
+</body>
+</html>

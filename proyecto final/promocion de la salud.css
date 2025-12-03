@@ -1,0 +1,313 @@
+body{
+    background-color: rgb(216, 84, 13);
+font-family: 'Times New Roman', Times, serif;
+margin: 25px;
+color: rgb(179, 2, 105);
+line-height: 1.6;
+text-align: center;
+align-items: center;
+}
+h1,h2,h3{
+font-family: 'Times New Roman', Times, serif;
+font-weight: 700;
+color: rgb(127, 168, 255);
+margin-bottom: 0.5em;
+}
+
+.button {
+display: inline-block;
+padding: 12px 24px;
+background-color: rgb(201, 172, 10);
+color: rgb(31, 20, 9);
+text-decoration: none;
+border-radius: 5px;
+transition: background-color 0.3s ease aquamarine red violet;
+
+text-align: center;
+align-items: center;
+}
+.button:hover{
+    background-color: blueviolet;
+}
+
+header{
+background-color: coral;
+padding: 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0 2px 5px navy;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+width: 50px;
+margin-right: 10px;
+}
+
+nav a {
+color: crimson;
+text-decoration: none;
+margin-left: 20px;
+transition: color 0.3s ease;
+}
+
+nav a:hover{
+color: rgb(54, 255, 13);
+}
+
+.hero{
+background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+url(´images/fondo-hero.png´) no-repeat center center fixed;
+background-size: cover;
+color: rgb(31, 19, 2);
+text-align: center;
+padding: 100px 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.hero-content{
+max-width: 600px;
+margin-right: 20px;
+}
+
+.hero-image img{
+width: 400px;
+border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.temas-principales{
+padding: 60px 20px;
+text-align: center;
+} 
+.temas-grid{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 30px;
+margin-top: 30px;
+}
+.tema{
+background-color: chartreuse;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tema:hover{
+transform: translateY(-5px);
+}
+
+.tema img{
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
+
+.tema h3{
+margin: 15px;
+font-size: 1.5em;
+}
+
+.tema p{
+margin: 15px;
+}
+
+
+.recursos-destacados{
+background-color: brown;
+padding: 60px 20px;
+text-align: center;
+
+
+align-items: center;
+}
+
+
+.recursos-lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.recurso {
+    background-color: aquamarine;
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;  
+}
+.recurso:hover{
+transform: translateY(-5px);
+
+text-align: center;
+align-items: center;
+}
+
+.recurso i{
+font-size: 3em;
+color: rgb(88, 255, 55);
+margin-bottom: 15px;
+text-align: center;
+align-items: center;
+width: 10%;
+height: 20px;
+
+}
+
+.formlario-contacto{
+padding: 60px 20px;
+text-align: center;
+}
+
+.formlario-contacto form{
+max-width: 600px;
+margin: 20px auto;
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+.formlario-contacto input,
+.formlario-contacto textarea{
+padding: 15px;
+border-radius: 5px;
+border-radius: 1px solid orange;
+font-size: 1em;
+}
+
+footer{
+background-color: turquoise;
+color: yellow;
+text-align: center;
+padding: 20px;
+}
+
+.contenedor{
+display: flex;
+place-content: center;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+
+
+
+footer{
+text-align: center;
+padding: 1em 0;
+background-color: blue;
+color: orangered;
+
+}
+
+footer{
+animation: colores 10s infinite;
+}
+@keyframes colores{
+0%{background-color: aqua;}
+25%{background-color: bisque;color: black;}
+50%{background-color: brown;color: rgb(33, 224, 15);}
+75%{background-color: coral;color: black;}
+100%{background-color: rgb(219, 207, 34);}
+
+
+}
+
+
+
+
+
+.fab:hover{
+transform: rotate(360deg) scale(1.1);
+transition: all 3s ease;
+
+
+}
+
+.fa-brands{
+    color: #25D366;
+box-shadow: 3px 3px 3px 3px;
+    border-radius: 5px;
+transform: rotate(360deg) scale(1.1);
+transition: all 1s ease;
+
+}
+
+.fa-whatsapp{ color: #25D366;
+
+}
+
+.fa-facebook{
+    color: #1877F2;
+    
+}
+
+.fa-instagram{
+    color: rgb(251, 12, 219);
+background: linear-gradient(45deg,navy ,red,purple );
+
+}
+
+.fa-twitter{
+    color: black;
+}
+
+.fa-youtube{
+    color: red;
+}
+
+a:hover .fa-brands{
+color: rgb(231, 250, 15);
+transform: rotate(15deg)scale(1.2);
+transition: all 4s ease;
+align-items: center;
+text-align: center;
+width: 100%;
+height: 200px;
+}
+.contenedor_de_iconos{
+display: flex;
+height: 40vh;
+flex-direction: row;
+justify-content: center;
+align-items: flex-end;
+gap: 12px;
+width: 100%;
+height: 200px;
+}
+.material-simbols-outlined{
+color: coral;
+}
+
+.video-container{
+position: relative;
+width: 100%;
+padding-bottom: 56.25%;
+height: 0;
+overflow: hidden;
+}
+
+.video-container iframe{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}

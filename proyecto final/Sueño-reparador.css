@@ -1,0 +1,137 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: #0b0f19;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+
+.hero {
+    padding: 120px 20px;
+    background: linear-gradient(180deg, #0b0f19 0%, #12182b 100%);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    animation: glow 3s infinite alternate;
+}
+
+
+.imagen-central img {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 20px;
+    display: block;
+    margin: 40px auto;
+    box-shadow: 0 0 40px rgba(0, 170, 255, 0.4);
+}
+
+
+.lista-beneficios {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.lista-beneficios li {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    padding-left: 30px;
+    position: relative;
+}
+
+.lista-beneficios li::before {
+    content: "✔";
+    color: #4ec9b0;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 40px 20px;
+}
+
+.card {
+    background: #151c2f;
+    padding: 25px;
+    border-radius: 20px;
+    width: 260px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 170, 255, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 40px rgba(0, 170, 255, 0.6);
+}
+
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: reveal 1s ease forwards;
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    animation: reveal-left 1s ease forwards;
+}
+
+.reveal-zoom {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: reveal-zoom 1.2s ease forwards;
+}
+
+.reveal-card {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: reveal 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+
+@keyframes reveal {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes reveal-left {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes reveal-zoom {
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #00aaff; }
+    to { text-shadow: 0 0 25px #00e1ff; }
+}
+p{
+    text-align: center;
+    align-items: center;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    color: white;
+    margin-top: 40px;
+}
